@@ -1,0 +1,38 @@
+<form [formGroup]="typeUserForm" (ngSubmit)="onSubmit()">
+    <p-card header="Técnico" [style]="{ width: '360px' , 'text-align': 'center' }">
+    <div class="field">
+    <!-- Botones para redireccionar a otras páginas -->
+  
+  <a routerLink="/login">
+    <p-button
+        label="Mostrar Agendas "
+        styleClass="w-full"
+        type="submit"
+        [style]="{ 'background-color': '#007bff0a', 'color': '#222121', 'border-color': '#007bff09' }"
+      ></p-button>
+      </a>
+    </div>
+    <div class="field">
+       <a routerLink="/login">
+      <p-button
+    label="Agendas Completadas"
+    styleClass="w-full"
+    type="submit"
+    [style]="{ 'background-color': '#007bff0a', 'color': '#222121', 'border-color': '#007bff09' }"
+  ></p-button>
+  </a>
+    </div>
+    <div class="field">
+        <a routerLink="/login">
+            <p-button
+                label="Cerrar Sesion"
+                styleClass="w-full"
+                type="submit"
+                [style]="{ 'background-color': '#007bff0a', 'color': '#222121', 'border-color': '#007bff09' }"
+              ></p-button>
+          </a>
+    </div> 
+
+
+  </p-card>
+  </form>

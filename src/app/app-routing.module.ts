@@ -6,12 +6,17 @@ import { HomeComponent } from './components/home/home.component';
 import { TypeUserComponent } from './components/type-user/type-user.component';
 import { BitacoraCComponent } from './components/bitacora-c/bitacora-c.component';
 import { authGuard } from './guards/auth.guard';
+import { TecnicoComponent } from './components/tecnico/tecnico.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
   {
     path: 'typeuser',
     component: TypeUserComponent,
+  },
+  {
+    path: '',
+    component: TecnicoComponent
   },
   {
     path: 'login',

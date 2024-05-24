@@ -15,19 +15,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { ToastModule } from 'primeng/toast';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MessageService } from 'primeng/api';
-import { InterfazCComponent } from './components/interfaz-c/interfaz-c.component';
-import { BitacoraCComponent } from './components/bitacora-c/bitacora-c.component';
-import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    HomeComponent,
-    TypeUserComponent, // Añade TypeUserComponent aquí
-    InterfazCComponent,
-    BitacoraCComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,
