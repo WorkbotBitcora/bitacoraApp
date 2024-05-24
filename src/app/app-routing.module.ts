@@ -3,29 +3,38 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { HomeComponent } from './components/home/home.component';
+import { TypeUserComponent } from './components/type-user/type-user.component';
+import { BitacoraCComponent } from './components/bitacora-c/bitacora-c.component';
 import { authGuard } from './guards/auth.guard';
 
 const routes: Routes = [
+  { path: '', component: HomeComponent},
+  {
+    path: 'typeuser',
+    component: TypeUserComponent,
+  },
   {
     path: 'login',
-    component: LoginComponent
+    component: LoginComponent,
   },
   {
     path: 'register',
-    component: RegisterComponent
+    component: RegisterComponent,
   },
   {
     path: 'home',
     component: HomeComponent,
-    canActivate: [authGuard]
+    canActivate: [authGuard],
   },
   {
-    path: '', redirectTo: 'home', pathMatch: 'full'
-  }
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full',
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

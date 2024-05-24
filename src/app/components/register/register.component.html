@@ -1,91 +1,91 @@
 <form [formGroup]="registerForm" (ngSubmit)="submitDetails()">
-  <p-card header="Register" [style]="{ width: '360px' }">
+  <p-card header="Registro" [style]="{ width: '360px' }">
     <div class="field">
-      <label for="Name">Name</label>
+      <label for="Name">Nombre</label>
       <input
         type="text"
         pInputText
         formControlName="Name"
         class="w-full"
         name="Name"
-        placeholder="Type your name"
+        placeholder="Pablito"
       />
       <small
         *ngIf="Name.invalid && (Name.dirty || Name.touched)"
         class="block p-error"
       >
-        <div *ngIf="Name.errors?.['required']">Name is required.</div>
-        <div *ngIf="Name.errors?.['pattern']">Enter a valid Name</div>
+        <div *ngIf="Name.errors?.['required']">El nombre es requerido.</div>
+        <div *ngIf="Name.errors?.['pattern']">EIngresa un nombre valido</div>
       </small>
     </div>
 
 
     <div class="field">
-      <label for="lastName">lastName</label>
+      <label for="lastName">Apellido</label>
       <input
         type="text"
         pInputText
         formControlName="lastName"
         class="w-full"
         name="lastName"
-        placeholder="Type your name"
+        placeholder="Cardenas Osorio"
       />
       <small
         *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)"
         class="block p-error"
       >
-        <div *ngIf="lastName.errors?.['required']">lastName is required.</div>
+        <div *ngIf="lastName.errors?.['required']">El apellido es requerido.</div>
         <div *ngIf="lastName.errors?.['pattern']">Enter a valid lastName</div>
       </small>
     </div>
 
 
     <div class="field">
-      <label for="user">user</label>
+      <label for="user">Usuario</label>
       <input
         type="text"
         pInputText
         formControlName="user"
         class="w-full"
         name="user"
-        placeholder="Type your user"
+        placeholder="Minino123"
       />
       <small
         *ngIf="user.invalid && (user.dirty || user.touched)"
         class="block p-error"
       >
-        <div *ngIf="user.errors?.['required']">user is required.</div>
-        <div *ngIf="user.errors?.['pattern']">Enter a valid user</div>
+        <div *ngIf="user.errors?.['required']">uUsuario es requerido.</div>
+        <div *ngIf="user.errors?.['pattern']">Ingresa un usuario valido</div>
       </small>
     </div>
 
 
     <div class="field">
-      <label for="password">Password</label>
+      <label for="password">Contraseña</label>
       <input
         type="password"
         pInputText
         formControlName="password"
         class="w-full"
         name="password"
-        placeholder="Type your password"
+        placeholder="Casa123456+"
       />
       <small
         *ngIf="password.invalid && (password.dirty || password.touched)"
         class="block p-error"
       >
-        <div *ngIf="password.errors?.['required']">Password is required.</div>
+        <div *ngIf="password.errors?.['required']">Contraseña es requerida.</div>
       </small>
     </div>
     <div class="field">
-      <label for="confirmPassword">Confirm Password</label>
+      <label for="confirmPassword">Confirmar Contraseña</label>
       <input
         type="password"
         pInputText
         formControlName="confirmPassword"
         class="w-full"
         name="confirmPassword"
-        placeholder="Confirm Password"
+        placeholder="Casa123456+"
       />
       <small
         *ngIf="
@@ -111,6 +111,6 @@
       [disabled]="registerForm.invalid"
       type="submit"
     ></p-button>
-    <div class="mt-2">Already a member? <a routerLink="/login">Login</a></div>
+    <div class="mt-2">¿Ya estas registrado? <a routerLink="/login">Login</a></div>
   </p-card>
 </form>

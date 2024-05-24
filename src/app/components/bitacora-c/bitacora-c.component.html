@@ -1,0 +1,24 @@
+<form [formGroup]="biteClientForm" (ngSubmit)="onSubmit()">
+  <p-card header="Bitacora" [style]="{ width: '360px' ,'text-align': 'center'}">
+  <div class="field">
+  <!-- Botones para redireccionar a otras páginas -->
+
+
+  <p-button
+      label="Usuario"
+      styleClass="w-full"
+      type="submit"
+      [style]="{ 'background-color': '#007bff0a', 'color': '#222121', 'border-color': '#007bff09' }"
+    ></p-button>
+  </div>
+  <div class="field">
+    <p-button
+  label="Técnico"
+  styleClass="w-full"
+  type="submit"
+  [style]="{ 'background-color': '#007bff0a', 'color': '#222121', 'border-color': '#007bff09' }"
+></p-button>
+
+  </div>
+</p-card>
+</form>

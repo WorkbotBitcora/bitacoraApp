@@ -1,0 +1,33 @@
+<form [formGroup]="interClientForm" (ngSubmit)="onSubmit()">
+  <p-card header="Bienvenido a Bitacora" [style]="{ width: '360px' ,'text-align': 'center'}">
+  <div class="field">
+  <!-- Botones para redireccionar a otras páginas -->
+
+
+  <p-button
+      label="LISTA DE REVISIONES"
+      styleClass="w-full"
+      type="submit"
+      [style]="{ 'background-color': '#007bff0a', 'color': '#222121', 'border-color': '#007bff09' }"
+    ></p-button>
+  </div>
+  <div class="field">
+    <p-button
+  label="AGENDAR REVISIÓNES"
+  styleClass="w-full"
+  type="submit"
+  [style]="{ 'background-color': '#007bff0a', 'color': '#222121', 'border-color': '#007bff09' }"
+></p-button>
+
+  </div>
+  <div class="field">
+    <p-button
+  label="CERRAR SESIÓN"
+  styleClass="w-full"
+  type="submit"
+  [style]="{ 'background-color': '#007bff0a', 'color': '#222121', 'border-color': '#007bff09' }"
+></p-button>
+
+  </div>
+</p-card>
+</form>
