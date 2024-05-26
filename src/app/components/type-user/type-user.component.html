@@ -1,9 +1,28 @@
 <form [formGroup]="typeUserForm" (ngSubmit)="onSubmit()">
+  <p-card header="Bienvenido a Bitacora" [style]="{ width: '360px', 'text-align': 'center'}">
+    <div class="field">
+      <!-- Botón para enviar el formulario con el tipo de usuario "Usuario" -->
+      <button type="button" (click)="setUserType('Usuario')" pButton styleClass="w-full"
+              [style]="{ 'background-color': '#007bff0a', 'color': '#222121', 'border-color': '#007bff09' }">
+        Usuario
+      </button>
+    </div>
+    <div class="field">
+      <!-- Botón para enviar el formulario con el tipo de usuario "Técnico" -->
+      <button type="button" (click)="setUserType('Técnico')" pButton styleClass="w-full"
+              [style]="{ 'background-color': '#007bff0a', 'color': '#222121', 'border-color': '#007bff09' }">
+        Técnico
+      </button>
+    </div>
+  </p-card>
+</form>
+
+<!--<form [formGroup]="typeUserForm" (ngSubmit)="onSubmit()">
   <p-card header="Bienvenido a Bitacora" [style]="{ width: '360px' ,'text-align': 'center'}">
-  <div class="field">
+  <div class="field">-->
   <!-- Botones para redireccionar a otras páginas -->
 
-<a routerLink="/login">
+<!--<a routerLink="/login">
   <p-button
       label="Usuario"
       styleClass="w-full"
@@ -23,6 +42,6 @@
 </a>
   </div>
 </p-card>
-</form>
+</form>-->
 
 

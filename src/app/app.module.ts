@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
-import { HomeComponent } from './components/home/home.component';
+
 import { TypeUserComponent } from './components/type-user/type-user.component'; // Importa TypeUserComponent
 import { CardModule } from 'primeng/card';
 import { InputTextModule } from 'primeng/inputtext';
@@ -15,13 +15,22 @@ import { HttpClientModule } from '@angular/common/http';
 import { ToastModule } from 'primeng/toast';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MessageService } from 'primeng/api';
+import { CommonModule } from '@angular/common';
+import { BitacoraCComponent } from './components/bitacora-c/bitacora-c.component';
+import { InterfazCComponent } from './components/interfaz-c/interfaz-c.component';
+import { TecnicoComponent } from './components/tecnico/tecnico.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    HomeComponent
+
+
+    TypeUserComponent,
+    BitacoraCComponent,
+    InterfazCComponent,
+    TecnicoComponent
   ],
   imports: [
     BrowserModule,
@@ -37,6 +46,10 @@ import { MessageService } from 'primeng/api';
     CommonModule
   ],
   providers: [MessageService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [
+    TypeUserComponent
+  ]
 })
 export class AppModule { }
+export class TypeUserModule { }
