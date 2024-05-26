@@ -20,6 +20,15 @@ import { BitacoraCComponent } from './components/bitacora-c/bitacora-c.component
 import { InterfazCComponent } from './components/interfaz-c/interfaz-c.component';
 import { TecnicoComponent } from './components/tecnico/tecnico.component';
 
+import { AgendaComponent } from './agenda/agenda.component';
+import { AgendacompletadasComponent } from './components/agendacompletadas/agendacompletadas.component';
+import { RegistroequiposComponent } from './components/registroequipos/registroequipos.component';
+import { ChecksComponent } from './components/checks/checks.component';
+import { ObservacionesComponent } from './components/observaciones/observaciones.component';
+import { DescripcionComponent } from './components/descripcion/descripcion.component';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +39,17 @@ import { TecnicoComponent } from './components/tecnico/tecnico.component';
     TypeUserComponent,
     BitacoraCComponent,
     InterfazCComponent,
+
+    TecnicoComponent,
+    AgendaComponent,
+    AgendacompletadasComponent,
+    RegistroequiposComponent,
+    ChecksComponent,
+    ObservacionesComponent,
+    DescripcionComponent
+
     TecnicoComponent
+
   ],
   imports: [
     BrowserModule,
