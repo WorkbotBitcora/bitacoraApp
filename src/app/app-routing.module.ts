@@ -11,7 +11,11 @@ import { TecnicoComponent } from './components/tecnico/tecnico.component';
 const routes: Routes = [
 
   {
-    path: '',
+path:'',
+component: BitacoraCComponent,
+},
+  {
+    path: 'typeUser',
     component: TypeUserComponent,
   },
   {

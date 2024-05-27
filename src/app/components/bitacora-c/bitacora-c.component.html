@@ -1,4 +1,22 @@
 <form [formGroup]="biteClientForm" (ngSubmit)="onSubmit()">
+  <p-card header="Generar Agenda" [style]="{ width: '360px' ,'text-align': 'center'}"></p-card>
+  <div class="field">
+    <label for="name">NOMBRE</label>
+    <input type="text" id="name" name="name" value="ANDRES" disabled>
+  </div>
+  <div class="field">
+    <label for="date">FECHA</label>
+    <input type="text" id="date" name="date" value="12/02/2024" disabled>
+  </div>
+  <div class="form-group">
+    <label for="description">DESCRIPCION</label>
+    <textarea id="description" name="description" disabled>fsdfdsfsdfgfgfdsfgdfdfgdf</textarea>
+  </div>
+  <button type="button" class="btn btn-danger">Cerrar Sesion</button>
+  <button type="submit" class="btn btn-success">Enviar</button>
+</form>
+
+<form [formGroup]="biteClientForm" (ngSubmit)="onSubmit()">
   <p-card header="Bitacora" [style]="{ width: '360px' ,'text-align': 'center'}">
   <div class="field">
   <!-- Botones para redireccionar a otras páginas -->
