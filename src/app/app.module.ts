@@ -20,7 +20,7 @@ import { BitacoraCComponent } from './components/bitacora-c/bitacora-c.component
 import { InterfazCComponent } from './components/interfaz-c/interfaz-c.component';
 import { TecnicoComponent } from './components/tecnico/tecnico.component';
 
-import { AgendaComponent } from './agenda/agenda.component';
+import { AgendaComponent } from './components/agenda/agenda.component';
 import { AgendacompletadasComponent } from './components/agendacompletadas/agendacompletadas.component';
 import { RegistroequiposComponent } from './components/registroequipos/registroequipos.component';
 import { ChecksComponent } from './components/checks/checks.component';
@@ -46,7 +46,7 @@ import { DescripcionComponent } from './components/descripcion/descripcion.compo
     RegistroequiposComponent,
     ChecksComponent,
     ObservacionesComponent,
-    DescripcionComponent
+    DescripcionComponent,
 
     TecnicoComponent
 

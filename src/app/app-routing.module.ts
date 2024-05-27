@@ -21,8 +21,8 @@ component: BitacoraCComponent,
     component: TypeUserComponent,
 
 
-  
- 
+
+  },
   {
     path: 'login',
     component: LoginComponent,
