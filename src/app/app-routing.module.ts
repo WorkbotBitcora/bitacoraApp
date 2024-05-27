@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 
+
+
 import { TypeUserComponent } from './components/type-user/type-user.component';
 import { BitacoraCComponent } from './components/bitacora-c/bitacora-c.component';
 import { authGuard } from './guards/auth.guard';
@@ -17,19 +19,25 @@ component: BitacoraCComponent,
   {
     path: 'typeUser',
     component: TypeUserComponent,
-  },
-  {
-    path: 'tecnico',
-    component: TecnicoComponent
-  },
+
+
+  
+ 
   {
     path: 'login',
     component: LoginComponent,
   },
   {
+    path: 'tecnico',
+    component: TecnicoComponent
+  },
+
+
+  {
     path: 'register',
     component: RegisterComponent,
   },
+
 
   {
     path: '',
