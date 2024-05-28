@@ -9,28 +9,42 @@ import { TypeUserComponent } from './components/type-user/type-user.component';
 import { BitacoraCComponent } from './components/bitacora-c/bitacora-c.component';
 import { authGuard } from './guards/auth.guard';
 import { TecnicoComponent } from './components/tecnico/tecnico.component';
+import { DescripcionCelularComponent } from './components/descripcion-celular/descripcion-celular.component';
+import { DescripcionMesaComponent } from './components/descripcion-mesa/descripcion-mesa.component';
+import { DescripcionPortatilComponent } from './components/descripcion-portatil/descripcion-portatil.component';
 import { AgendaComponent } from './components/agenda/agenda.component';
 import { RegistroequiposComponent } from './components/registroequipos/registroequipos.component';
 import { CheckportatilComponent } from './components/checkportatil/checkportatil.component';
-
-const routes: Routes = [{
-
+const routes: Routes = [
+{
+  path:'',
+  component:DescripcionCelularComponent
+},
+{
+  path:'descripcionMesa',
+  component:DescripcionMesaComponent
+},
+{
+  path:'descripcionPortatil',
+  component:DescripcionPortatilComponent
+},
   path: 'checkportatil',
   component: CheckportatilComponent
 },
   
   {
-  path: '',
+  path: 'registroEquipo',
   component: RegistroequiposComponent,
 
 },
 {
-  path : '',
+  path : 'agendaCom',
   component: AgendaComponent,
 
 },
   {
 path:'bitacoracliente',
+
 component: BitacoraCComponent,
 },
   {
