@@ -1,1 +1,51 @@
 <p>registroequipos works!</p>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+    <style>
+        /* Estilos para los recuadros */
+        .input-box {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        /* Estilos para el botón de revisión */
+        .btn-revision {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Registro de Equipos</h1>
+    <div class="input-box">
+        <label for="id">ID:</label>
+        <input type="text" id="id" placeholder="Ingrese el ID">
+    </div>
+    <div class="input-box">
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha">
+    </div>
+    <div class="input-box">
+        <label for="nombreCliente">Nombre del Cliente:</label>
+        <input type="text" id="nombreCliente" placeholder="Ingrese el nombre del cliente">
+    </div>
+    <h2>Tipo de Equipo</h2>
+    <div class="input-box">
+        <label><input type="checkbox"> Mesa</label>
+        <label><input type="checkbox"> Portátil</label>
+        <label><input type="checkbox"> Celular</label>
+    </div>
+    <div class="input-box">
+        <label for="marca">Marca:</label>
+        <input type="text" id="marca" placeholder="Ingrese la marca">
+    </div>
+    <button class="btn-revision">Revisión</button>
+</body>
+</html>

@@ -23,9 +23,11 @@ import { TecnicoComponent } from './components/tecnico/tecnico.component';
 import { AgendaComponent } from './components/agenda/agenda.component';
 import { AgendacompletadasComponent } from './components/agendacompletadas/agendacompletadas.component';
 import { RegistroequiposComponent } from './components/registroequipos/registroequipos.component';
-import { ChecksComponent } from './components/checks/checks.component';
 import { ObservacionesComponent } from './components/observaciones/observaciones.component';
 import { DescripcionComponent } from './components/descripcion/descripcion.component';
+import { CheckmesaComponent } from './components/checkmesa/checkmesa.component';
+import { CheckportatilComponent } from './components/checkportatil/checkportatil.component';
+import { CheckcelularComponent } from './components/checkcelular/checkcelular.component';
 
 
 
@@ -44,11 +46,13 @@ import { DescripcionComponent } from './components/descripcion/descripcion.compo
     AgendaComponent,
     AgendacompletadasComponent,
     RegistroequiposComponent,
-    ChecksComponent,
     ObservacionesComponent,
     DescripcionComponent,
 
-    TecnicoComponent
+    TecnicoComponent,
+      CheckmesaComponent,
+      CheckportatilComponent,
+      CheckcelularComponent
 
   ],
   imports: [

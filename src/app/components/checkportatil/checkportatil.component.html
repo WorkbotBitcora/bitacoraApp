@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .seleccionable {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+            cursor: pointer;
+        }
+
+        .nombre {
+            font-weight: bold;
+        }
+
+        .recuadro {
+            width: 20px;
+            height: 20px;
+            border: 1px solid #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .chulo {
+            display: none;
+            width: 20px;
+            height: 20px;
+            background-color: #007bff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+        }
+
+        .seleccionable:hover .chulo {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Componentes del portátil</h1>
+    <div class="seleccionable">
+        <div class="recuadro"></div>
+        <div class="nombre">Batería</div>
+        <div class="chulo">✓</div>
+    </div>
+    <!-- Repite lo mismo para los demás componentes -->
+</body>
+</html>
