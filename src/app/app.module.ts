@@ -23,9 +23,12 @@ import { TecnicoComponent } from './components/tecnico/tecnico.component';
 import { AgendaComponent } from './components/agenda/agenda.component';
 import { AgendacompletadasComponent } from './components/agendacompletadas/agendacompletadas.component';
 import { RegistroequiposComponent } from './components/registroequipos/registroequipos.component';
-import { ChecksComponent } from './components/checks/checks.component';
+
 import { ObservacionesComponent } from './components/observaciones/observaciones.component';
-import { DescripcionComponent } from './components/descripcion/descripcion.component';
+import { DescripcionMesaComponent } from './components/descripcion-mesa/descripcion-mesa.component';
+import { DescripcionPortatilComponent } from './components/descripcion-portatil/descripcion-portatil.component';
+import { DescripcionCelularComponent } from './components/descripcion-celular/descripcion-celular.component';
+
 
 
 
@@ -34,21 +37,19 @@ import { DescripcionComponent } from './components/descripcion/descripcion.compo
     AppComponent,
     LoginComponent,
     RegisterComponent,
-
-
     TypeUserComponent,
     BitacoraCComponent,
     InterfazCComponent,
-
     TecnicoComponent,
     AgendaComponent,
     AgendacompletadasComponent,
     RegistroequiposComponent,
-    ChecksComponent,
-    ObservacionesComponent,
-    DescripcionComponent,
 
-    TecnicoComponent
+    ObservacionesComponent,
+    TecnicoComponent,
+    DescripcionMesaComponent,
+    DescripcionPortatilComponent,
+    DescripcionCelularComponent
 
   ],
   imports: [

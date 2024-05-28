@@ -9,11 +9,25 @@ import { TypeUserComponent } from './components/type-user/type-user.component';
 import { BitacoraCComponent } from './components/bitacora-c/bitacora-c.component';
 import { authGuard } from './guards/auth.guard';
 import { TecnicoComponent } from './components/tecnico/tecnico.component';
+import { DescripcionCelularComponent } from './components/descripcion-celular/descripcion-celular.component';
+import { DescripcionMesaComponent } from './components/descripcion-mesa/descripcion-mesa.component';
+import { DescripcionPortatilComponent } from './components/descripcion-portatil/descripcion-portatil.component';
 
 const routes: Routes = [
-
+{
+  path:'',
+  component:DescripcionCelularComponent
+},
+{
+  path:'descripcionMesa',
+  component:DescripcionMesaComponent
+},
+{
+  path:'descripcionPortatil',
+  component:DescripcionPortatilComponent
+},
   {
-path:'',
+path:'agenda',
 component: BitacoraCComponent,
 },
   {
