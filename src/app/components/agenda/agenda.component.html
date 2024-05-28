@@ -1,1 +1,96 @@
-<p>agenda works!</p>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla de Bitácora</title>
+    <!-- Agrega aquí tus enlaces a hojas de estilo (CSS) si los tienes -->
+    <style>
+        /* Estilos para el recuadro */
+        .recuadro {
+            border: 1px solid #1E679A;
+            padding: 10px;
+            background-color: #ffffcc;
+            margin-bottom: 20px;
+            text-align: center; /* Centrar el contenido */
+        }
+        .titulo {
+            font-weight: bold;
+            color: #FFFFFF;
+            font-size: 18px;
+        }
+        .tabla {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .tabla th, .tabla td {
+            border: 1px solid #1E679A;
+            padding: 8px;
+            text-align: left;
+        }
+        .botones {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center; /* Centrar horizontalmente */
+        }
+        .boton {
+            font-size: 16px;
+            padding: 10px 20px;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="recuadro">
+        <div class="titulo">Tabla de Bitácora</div>
+        <table class="tabla">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>FECHA</th>
+                    <th>CLIENTE</th>
+                    <th>ESTADO</th>
+                    <th>ACCION</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>2024-05-27</td>
+                    <td>Cliente A</td>
+                    <td>Activo</td>
+                    <td>
+                        <input type="checkbox" id="accion1" name="accion1">
+                        <label for="accion1">Editar</label>
+                    </td>
+                </tr>
+                <!-- ...otros datos -->
+            </tbody>
+        </table>
+        <div class="botones">
+            <a href="/tecnico">
+                <button class="boton">Atrás</button>
+            </a>
+            <a href="/login">
+                <button class="boton">Cerrar Sesión</button>
+            </a>
+            <a href="/ruta-de-actualizacion">
+                <button class="boton">Refrescar</button>
+            </a>
+            <a href="/registro"> <!-- Agregamos el enlace a la página de revisión -->
+                <button class="boton">Revisar</button>
+            </a>
+        </div>
+    </div>
+
+    <!-- Agrega aquí tus scripts (JavaScript) si los tienes -->
+    <script>
+        function handleRevisarClick() {
+            // Aquí puedes realizar alguna acción con los elementos seleccionados
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+            const selectedRows = Array.from(checkboxes).map((checkbox) => checkbox.id);
+            console.log('Filas seleccionadas:', selectedRows);
+        }
+    </script>
+</body>
+</html>
