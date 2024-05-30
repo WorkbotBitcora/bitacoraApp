@@ -53,9 +53,9 @@ import { CheckcelularComponent } from './components/checkcelular/checkcelular.co
     TecnicoComponent,
     DescripcionMesaComponent,
     DescripcionPortatilComponent,
-    DescripcionCelularComponent
+    DescripcionCelularComponent,
     ObservacionesComponent,
-    
+
 
     TecnicoComponent,
       CheckmesaComponent,

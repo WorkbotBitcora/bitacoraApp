@@ -2,9 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
-
-
-
 import { TypeUserComponent } from './components/type-user/type-user.component';
 import { BitacoraCComponent } from './components/bitacora-c/bitacora-c.component';
 import { authGuard } from './guards/auth.guard';
@@ -15,9 +12,11 @@ import { DescripcionPortatilComponent } from './components/descripcion-portatil/
 import { AgendaComponent } from './components/agenda/agenda.component';
 import { RegistroequiposComponent } from './components/registroequipos/registroequipos.component';
 import { CheckportatilComponent } from './components/checkportatil/checkportatil.component';
+
+
 const routes: Routes = [
 {
-  path:'',
+  path:'',//descripcionCelular
   component:DescripcionCelularComponent
 },
 {
@@ -28,13 +27,15 @@ const routes: Routes = [
   path:'descripcionPortatil',
   component:DescripcionPortatilComponent
 },
+  {
   path: 'checkportatil',
   component: CheckportatilComponent
 },
-  
+
+
   {
   path: 'registroEquipo',
-  component: RegistroequiposComponent,
+  component: RegistroequiposComponent
 
 },
 {
@@ -43,14 +44,14 @@ const routes: Routes = [
 
 },
   {
-path:'bitacoracliente',
+path:'bitacoraCliente',
 
 component: BitacoraCComponent,
 },
   {
     path: 'typeUser',
     component: TypeUserComponent,
-
+    pathMatch: 'full',
 
 
   },
@@ -67,13 +68,6 @@ component: BitacoraCComponent,
   {
     path: 'register',
     component: RegisterComponent,
-  },
-
-
-  {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full',
   },
 ];
 
