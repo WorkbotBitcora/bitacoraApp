@@ -12,10 +12,28 @@ import { TecnicoComponent } from './components/tecnico/tecnico.component';
 import { AgendaComponent } from './components/agenda/agenda.component';
 import { RegistroequiposComponent } from './components/registroequipos/registroequipos.component';
 import { CheckportatilComponent } from './components/checkportatil/checkportatil.component';
+import { CheckmesaComponent } from './components/checkmesa/checkmesa.component';
+import { CheckcelularComponent } from './components/checkcelular/checkcelular.component';
+import { ObservacionesComponent } from './components/observaciones/observaciones.component';
 
 const routes: Routes = [{
+  path: 'observaciones',
+  component: ObservacionesComponent
+},
+  {
+  path: 'celular',
+  component: CheckcelularComponent
 
-  path: 'checkportatil',
+},
+  {
+  path:'mesa',
+  component: CheckmesaComponent
+
+},
+  
+  {
+
+  path: 'portatil',
   component: CheckportatilComponent
 },
   
@@ -25,7 +43,7 @@ const routes: Routes = [{
 
 },
 {
-  path : '',
+  path : 'agenda',
   component: AgendaComponent,
 
 },

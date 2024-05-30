@@ -1,1 +1,127 @@
-<p>checkmesa works!</p>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .seleccionable {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+            cursor: pointer;
+        }
+
+        .nombre {
+            font-weight: bold;
+        }
+
+        .recuadro {
+            width: 20px;
+            height: 20px;
+            border: 1px solid #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .chulo {
+            display: none;
+            width: 20px;
+            height: 20px;
+            background-color: #007bff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+        }
+
+        .seleccionable:hover .chulo {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Componentes de mesa</h1>
+    <br>
+    <div class="input-box">
+        <label><input type="checkbox"> Memoria RAM </label>
+    </div>
+    <br>
+    <div class="input-box">
+        <label><input type="checkbox"> Disco Duro/SSD </label>
+    </div>
+    <br>
+    <div class="input-box">
+        <label><input type="checkbox"> Tarjeta grafico (GPU) </label>
+    </div>
+    <br>
+    <div class="input-box">
+        <label><input type="checkbox"> Ventilacion y refrigeracion  </label>
+    </div>
+    <br>
+    <div class="input-box">
+        <label><input type="checkbox"> Monitor </label>
+    </div>
+    <br>
+    <div class="input-box">
+        <label><input type="checkbox"> Sistema Operativo </label>
+    </div>
+    <br>
+    <div class="input-box">
+        <label><input type="checkbox"> Controladores de dispositivos  </label>
+    </div>
+    <br>
+    <div class="input-box">
+        <label><input type="checkbox"> Puertos USB </label>
+    </div>
+    <br>
+    <div class="input-box">
+        <label><input type="checkbox"> Pruebas de rendimiento </label>
+    </div>
+    <br>
+    <div class="input-box">
+        <label><input type="checkbox"> Temperatura del sistema </label>
+    </div>
+    <br>
+    <div class="input-box">
+        <label><input type="checkbox"> Actualizaciones de software y controladores </label>
+    </div>
+    
+    <br>
+    
+
+    <div class="field">
+        <a routerLink="/observaciones">
+            <p-button
+                label="Siguiente"
+                styleClass="w-full"
+                type="submit"
+                [style]="{ 'background-color': '#007bff0a', 'color': '#222121', 'border-color': '#007bff09' }"
+              ></p-button>
+          </a>
+    </div> 
+    
+
+    <div class="field">
+        <a routerLink="/">
+            <p-button
+                label="Cancelar"
+                styleClass="w-full"
+                type="submit"
+                [style]="{ 'background-color': '#007bff0a', 'color': '#222121', 'border-color': '#007bff09' }"
+              ></p-button>
+          </a>
+    </div> 
+    
+
+
+    
+    
+</body>
+</html>
+
+
+
