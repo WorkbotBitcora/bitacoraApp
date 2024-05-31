@@ -12,11 +12,16 @@ import { DescripcionPortatilComponent } from './components/descripcion-portatil/
 import { AgendaComponent } from './components/agenda/agenda.component';
 import { RegistroequiposComponent } from './components/registroequipos/registroequipos.component';
 import { CheckportatilComponent } from './components/checkportatil/checkportatil.component';
+import { BitacoraComponent } from './components/bitacora/bitacora.component';
 
 
 const routes: Routes = [
+  {
+    path:'',
+    component:BitacoraComponent
+  },
 {
-  path:'',//descripcionCelular
+  path:'descripcionCelular',//descripcionCelular
   component:DescripcionCelularComponent
 },
 {

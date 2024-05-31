@@ -1,0 +1,10 @@
+/* tabla-bitacora.component.css */
+table {
+  border-collapse: collapse; /* Combina los bordes de las celdas */
+  width: 100%;
+}
+
+td, th {
+  border: 2px solid #ddd; /* Agrega un borde a las celdas */
+  padding: 20px;
+}

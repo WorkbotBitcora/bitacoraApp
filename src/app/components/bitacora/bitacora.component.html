@@ -1,0 +1,31 @@
+<form [formGroup]="typeUserForm" (ngSubmit)="onSubmit()">
+  <p-card header="Bitacora" [style]="{ width: '800px', 'text-align': 'center'  }">
+<table>
+  <thead>
+    <tr>
+      <th>FECHA INICIO</th>
+      <th>FECHA FIN</th>
+      <th>ENCARGADO</th>
+      <th>NOMBRE CLIENTE</th>
+      <th>TIPO EQUIPO</th>
+      <th>Observaciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of bitacoraItems">
+      <td>{{ item.fechaInicio }}</td>
+      <td>{{ item.fechaFin }}</td>
+      <td>{{ item.encargado }}</td>
+      <td>{{ item.nombreCliente }}</td>
+      <td>{{ item.tipoEquipo }}</td>
+      <td> <p-button
+          label="Ver"
+          styleClass="w-full"
+          (click)="verObservaciones(item)"
+          [style]="{ 'background-color': '#007bff0a', 'color': '#222121', 'border-color': '#007bff09' }"
+        ></p-button></td>
+    </tr>
+  </tbody>
+</table>
+  </p-card>
+  </form>

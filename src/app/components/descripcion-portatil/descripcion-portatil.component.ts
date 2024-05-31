@@ -19,7 +19,7 @@ opciones = [
     { value: 'opcion8', label: 'Temperatura' },
     { value: 'opcion9', label: 'Camaras y sensores' },
     { value: 'opcion10', label: 'Teclado y touchpad' },
-    { value: 'opcion10', label: 'Conexiones' }
+    { value: 'opcion11', label: 'Conexiones' }
     // Agrega más opciones según sea necesario
   ];
 
