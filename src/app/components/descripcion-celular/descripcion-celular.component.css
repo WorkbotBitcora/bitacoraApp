@@ -1,0 +1,19 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+}
+
+input[type="checkbox"] {
+    margin-right: 20px; /* Espacio entre el checkbox y el texto */
+}
+
+.bigText {
+    font-size: 24px; /* Tamaño del texto */
+    flex-grow: 1; /* Ajuste para centrar el texto */
+}

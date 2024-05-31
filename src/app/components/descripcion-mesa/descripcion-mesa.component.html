@@ -1,0 +1,41 @@
+<form [formGroup]="typeUserForm" (ngSubmit)="onSubmit()">
+  <p-card header="Descripción Mesa" [style]="{ width: '360px', 'text-align': 'left'  }">
+    <div class="field" *ngFor="let opcion of opciones">
+      <input type="checkbox" id="miCheckbox{{ opcion.value }}" name="miCheckbox" [value]="convertirValor(opcion.value)" class="bigText"
+      >
+      <label for="miCheckbox{{ opcion.value }}"> {{ opcion.label }}</label>
+    </div>
+     <div class="form-group">
+        <label for="Observaciones">DESCRIPCION</label>
+        <p><textarea id="observacion" name="description" class="custom-textarea"
+      rows="6" placeholder="Ingresa tu texto aquí" styleClass="w-full"
+       [style]="{ width: '360px' ,'text-align': 'center'}"></textarea></p>
+      </div>
+       <div class="form-group">
+        <label for="Mejoras">DESCRIPCION</label>
+        <p><textarea id="mejora" name="description" class="custom-textarea"
+      rows="6" placeholder="Ingresa tu texto aquí" styleClass="w-full"
+       [style]="{ width: '360px' ,'text-align': 'center'}"></textarea></p>
+      </div>
+      <div class="field">
+
+      <p-button
+        label="Enviar"
+         styleClass="w-1/2"
+         type="submit"
+        [style]="{ 'background-color': '#007bff0a', 'color': '#222121', 'border-color': '#007bff09' }"
+></p-button>
+      <p-button
+       label="Cancelar"
+       styleClass="w-1/2"
+       type="submit"
+       [style]="{ 'background-color': '#007bff0a', 'color': '#222121', 'border-color': '#007bff09' }"
+></p-button>
+  </div>
+  </p-card>
+</form>
+
+
+
+
+
