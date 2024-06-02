@@ -35,7 +35,11 @@ import { DescripcionCelularComponent } from './components/descripcion-celular/de
 import { CheckmesaComponent } from './components/checkmesa/checkmesa.component';
 import { CheckportatilComponent } from './components/checkportatil/checkportatil.component';
 import { CheckcelularComponent } from './components/checkcelular/checkcelular.component';
+
+import { BitacoraComponent } from './components/bitacora/bitacora.component';
+
 import { ClienteComponent } from './components/cliente/cliente.component';
+
 
 
 
@@ -62,7 +66,11 @@ import { ClienteComponent } from './components/cliente/cliente.component';
       CheckmesaComponent,
       CheckportatilComponent,
       CheckcelularComponent,
+
+      BitacoraComponent
+
       ClienteComponent
+
 
 
   ],

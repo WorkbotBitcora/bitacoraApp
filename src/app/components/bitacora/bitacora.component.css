@@ -1,0 +1,32 @@
+/* tabla-bitacora.component.css */
+table {
+  border-collapse: collapse; /* Combina los bordes de las celdas */
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #ddd; /* Agrega un borde a las celdas */
+  padding: 20px;
+}
+.table-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.table-row {
+  display: flex;
+  width: 100%;
+}
+
+.table-header {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+
+.table-cell {
+  flex: 1;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+

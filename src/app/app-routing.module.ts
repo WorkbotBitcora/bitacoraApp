@@ -12,10 +12,28 @@ import { DescripcionPortatilComponent } from './components/descripcion-portatil/
 import { AgendaComponent } from './components/agenda/agenda.component';
 import { RegistroequiposComponent } from './components/registroequipos/registroequipos.component';
 import { CheckportatilComponent } from './components/checkportatil/checkportatil.component';
+
+import { BitacoraComponent } from './components/bitacora/bitacora.component';
 import { CheckcelularComponent } from './components/checkcelular/checkcelular.component';
 import { CheckmesaComponent } from './components/checkmesa/checkmesa.component';
 import { ObservacionesComponent } from './components/observaciones/observaciones.component';
 import { ClienteComponent } from './components/cliente/cliente.component';
+
+const routes: Routes = [
+  {
+path:'',
+
+component: BitacoraCComponent,
+},
+  {
+    path:'bitacora',
+    component:BitacoraComponent
+  },
+{
+  path:'descripcionCelular',//descripcionCelular
+  component:DescripcionCelularComponent
+
+
 
 
 
@@ -27,6 +45,7 @@ const routes: Routes = [{
 {
   path: 'mesa',
   component: CheckmesaComponent
+
 },
 {
   path: 'celular',
@@ -65,6 +84,24 @@ const routes: Routes = [{
   component: AgendaComponent,
 
 },
+
+
+  {
+    path: 'typeUser',
+    component: TypeUserComponent,
+    pathMatch: 'full',
+
+
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
+  },
+  {
+    path: 'tecnico',
+    component: TecnicoComponent
+  },
+
 {
   path: 'bitacoraCliente',
 
@@ -86,6 +123,7 @@ const routes: Routes = [{
 {
   path:'usuario' , 
   component: ClienteComponent
+
 
 },
 
