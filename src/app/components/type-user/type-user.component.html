@@ -2,74 +2,21 @@
   <p-card header="Bienvenido a Bitacora" [style]="{ width: '360px', 'text-align': 'center'}">
     <div class="field">
       <!-- Botón para enviar el formulario con el tipo de usuario "Usuario" -->
-<a routerLink="/login">
-      <button type="button" (click)="setUserType('Usuario')" pButton styleClass="w-full"
-              [style]="{ 'background-color': '#007bff0a', 'color': '#222121', 'border-color': '#007bff09' }">
-        Usuario
-      </button>
+      <a routerLink="/login">
+        <button type="button" (click)="setUserType('Usuario')" pButton styleClass="w-full"
+          [style]="{ 'background-color': '#007bff0a', 'color': '#222121', 'border-color': '#007bff09' }">
+          Usuario
+        </button>
       </a>
-    </div>
-
-    <div>
-      <a routerLink="/login"></a>
-      <p-button
-      (click)="setUserType('Usuario')"
-      label="Usuario"
-      styleClass="w-full"
-      type="submit"
-      [style]="{ 'background-color': '#007bff0a', 'color': '#222121', 'border-color': '#007bff09' }">
-
-      </p-button>
     </div>
     <div class="field">
       <!-- Botón para enviar el formulario con el tipo de usuario "Técnico" -->
       <a routerLink="/login">
-      <p-button
-      (click)="setUserType('Técnico')"
-      label="Técnico"
-      styleClass="w-full"
-      type="submit"
-      [style]="{ 'background-color': '#007bff0a', 'color': '#222121', 'border-color': '#007bff09' }">
-     </p-button>
-
-      </a>
-</div>
-      <div class="field">
-        <a routerLink="/login">
-      <button type="button" (click)="setUserType('Técnico')" pButton styleClass="w-full"
-              [style]="{ 'background-color': '#007bff0a', 'color': '#222121', 'border-color': '#007bff09' }">
-        Técnico
-      </button>
+        <button (click)="setUserType('Técnico')"  pButton styleClass="w-full" type="button"
+          [style]="{ 'background-color': '#007bff0a', 'color': '#222121', 'border-color': '#007bff09' }">
+          Técnico
+        </button>
       </a>
     </div>
   </p-card>
 </form>
-
-<!--<form [formGroup]="typeUserForm" (ngSubmit)="onSubmit()">
-  <p-card header="Bienvenido a Bitacora" [style]="{ width: '360px' ,'text-align': 'center'}">
-  <div class="field">-->
-  <!-- Botones para redireccionar a otras páginas -->
-
-<!--<a routerLink="/login">
-  <p-button
-      label="Usuario"
-      styleClass="w-full"
-      type="submit"
-      [style]="{ 'background-color': '#007bff0a', 'color': '#222121', 'border-color': '#007bff09' }"
-    ></p-button>
-    </a>
-  </div>
-  <div class="field">
-     <a routerLink="/login">
-    <p-button
-  label="Técnico"
-  styleClass="w-full"
-  type="submit"
-  [style]="{ 'background-color': '#007bff0a', 'color': '#222121', 'border-color': '#007bff09' }"
-></p-button>
-</a>
-  </div>
-</p-card>
-</form>-->
-
-

@@ -15,84 +15,88 @@ import { CheckportatilComponent } from './components/checkportatil/checkportatil
 import { CheckcelularComponent } from './components/checkcelular/checkcelular.component';
 import { CheckmesaComponent } from './components/checkmesa/checkmesa.component';
 import { ObservacionesComponent } from './components/observaciones/observaciones.component';
+import { ClienteComponent } from './components/cliente/cliente.component';
 
 
 
 const routes: Routes = [{
-  path:'observaciones',
-  component:ObservacionesComponent
+
+  path: 'observaciones',
+  component: ObservacionesComponent
 },
-  {
-  path:'',
-  component:CheckmesaComponent
+{
+  path: 'mesa',
+  component: CheckmesaComponent
 },
-  {
-  path:'celular',
+{
+  path: 'celular',
   component: CheckcelularComponent
 },
-  {
+{
   path: 'portatil',
   component: CheckportatilComponent
 },
-  
+
 {
-  path:'descripcionCelular',//descripcionCelular
-  component:DescripcionCelularComponent
+  path: 'descripcionCelular',//descripcionCelular
+  component: DescripcionCelularComponent
 },
 {
-  path:'descripcionMesa',
-  component:DescripcionMesaComponent
+  path: 'descripcionMesa',
+  component: DescripcionMesaComponent
 },
 {
-  path:'descripcionPortatil',
-  component:DescripcionPortatilComponent
+  path: 'descripcionPortatil',
+  component: DescripcionPortatilComponent
 },
-  {
+{
   path: 'checkportatil',
   component: CheckportatilComponent
 },
 
 
-  {
-  path: 'registro',
+{
+  path: 'nombre',
   component: RegistroequiposComponent
 
 },
 {
-  path : 'agendaCom',
+  path: 'agendaCom',
   component: AgendaComponent,
 
 },
-  {
-path:'bitacoraCliente',
+{
+  path: 'bitacoraCliente',
 
-component: BitacoraCComponent,
+  component: BitacoraCComponent,
 },
-  {
-    path: 'typeUser',
-    component: TypeUserComponent,
-    pathMatch: 'full',
+{
+  path: '',
+  component: TypeUserComponent,
+  pathMatch: 'full',
+},
+{
+  path: 'login',
+  component: LoginComponent,
+},
+{
+  path: 'tecnico',
+  component: TecnicoComponent
+},
+{
+  path:'usuario' , 
+  component: ClienteComponent
 
+},
 
-  },
-  {
-    path: 'login',
-    component: LoginComponent,
-  },
-  {
-    path: 'tecnico',
-    component: TecnicoComponent
-  },
-
-
-  {
-    path: 'register',
-    component: RegisterComponent,
-  },
+{
+  path: 'register',
+  component: RegisterComponent,
+},
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

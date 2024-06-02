@@ -3,7 +3,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
 import { MessageService } from 'primeng/api';
-import { Injectable} from '@angular/core';
+import { Injectable } from '@angular/core';
 import { UserTypeService } from 'src/app/services/type-user.service';
 
 @Component({
@@ -22,7 +22,9 @@ export class TypeUserComponent {
   typeUserForm = this.fb.group({
     Name: ['', [Validators.required, Validators.pattern(/^[a-zA-Z]+(?: [a-zA-Z]+)*$/)]],
   });
-setUserType(type: string) {
+   
+  setUserType(type: string) {
+    localStorage.setItem('userType', type);
     this.userTypeService.setUserType(type);
   }
 
@@ -39,8 +41,8 @@ setUserType(type: string) {
     console.log('Formulario enviado');
     const userType = this.typeUserForm.value.Name; // Obtén el valor del tipo de usuario del formulario
     if (userType !== null && userType !== undefined) {
-    this.userTypeChanged.emit(userType); // Emite el tipo de usuario
-  }
+      this.userTypeChanged.emit(userType); // Emite el tipo de usuario
+    }
   }
 
   redirectToOtraPagina() {

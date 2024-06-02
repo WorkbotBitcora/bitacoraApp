@@ -18,24 +18,30 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
   templateUrl: './tecnico.component.html',
   styleUrls: ['./tecnico.component.css']
 })
-export class TecnicoComponent {typeUserForm= this.fb.group({
-  Name: ['', [Validators.required, Validators.pattern(/^[a-zA-Z]+(?: [a-zA-Z]+)*$/)]],
+export class TecnicoComponent {
+  typeUserForm = this.fb.group({
+    Name: ['', [Validators.required, Validators.pattern(/^[a-zA-Z]+(?: [a-zA-Z]+)*$/)]],
 
-}
-);
-constructor(
-  private fb: FormBuilder,
-  private authService: AuthService,
-  private messageService: MessageService,
-  private router: Router
-) { }
-onSubmit() {
-  // Lógica para manejar el envío del formulario
-  console.log('Formulario enviado');
+  }
+  );
+  constructor(
+    private fb: FormBuilder,
+    private authService: AuthService,
+    private messageService: MessageService,
+    private router: Router
+  ) { }
+  onSubmit() {
+    // Lógica para manejar el envío del formulariof
+    console.log('Formulario enviado');
 
-}
-redirectToOtraPagina() {
-  // Redirige a otra página utilizando el enrutamiento de Angular
-  this.router.navigate(['login']);
-}
+  }
+  redirectToOtraPagina() {
+    // Redirige a otra página utilizando el enrutamiento de Angular
+    this.router.navigate(['login']);
+  }
+
+  public logOut() {
+    localStorage.clear();
+    console.log("entro al logOut")
+  }
 }
