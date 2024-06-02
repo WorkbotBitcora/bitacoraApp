@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./bitacora.component.css']
 })
 export class BitacoraComponent {
+
   bitacoraItems = [
     { fechaInicio: '02/08/2021', fechaFin: '02/09/2021', encargado: 'Andres', nombreCliente: 'Pedro', tipoEquipo: 'Portatil' },
     // Agrega más elementos aquí
@@ -35,6 +36,18 @@ export class BitacoraComponent {
       }
     }
   }
+  goToRouteObservacion() {
+  this.router.navigate(['/route1']);
+  }
+
+  goToRouteRegresar() {
+  this.router.navigate(['/route2']);
+  }
+
+  goToRouteCerrar() {
+  this.router.navigate(['/route3']);
+  }
+
   verObservaciones(item: any) {
     console.log('Observaciones:', item.observaciones);
     // Implementa la lógica para mostrar las observaciones

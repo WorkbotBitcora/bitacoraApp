@@ -1,31 +1,57 @@
-<form [formGroup]="typeUserForm" (ngSubmit)="onSubmit()">
+
+
+  <form [formGroup]="typeUserForm" (ngSubmit)="onSubmit()">
   <p-card header="Bitacora" [style]="{ width: '800px', 'text-align': 'center'  }">
-<table>
-  <thead>
-    <tr>
-      <th>FECHA INICIO</th>
-      <th>FECHA FIN</th>
-      <th>ENCARGADO</th>
-      <th>NOMBRE CLIENTE</th>
-      <th>TIPO EQUIPO</th>
-      <th>Observaciones</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let item of bitacoraItems">
-      <td>{{ item.fechaInicio }}</td>
-      <td>{{ item.fechaFin }}</td>
-      <td>{{ item.encargado }}</td>
-      <td>{{ item.nombreCliente }}</td>
-      <td>{{ item.tipoEquipo }}</td>
-      <td> <p-button
+    <div class="table-container">
+  <div class="table-row table-header">
+    <div class="table-cell">FECHA INICIO</div>
+    <div class="table-cell">FECHA FIN</div>
+    <div class="table-cell">ENCARGADO</div>
+    <div class="table-cell">NOMBRE CLIENTE</div>
+    <div class="table-cell">TIPO EQUIPO</div>
+    <div class="table-cell">Observaciones</div>
+  </div>
+
+  <div class="table-row" *ngFor="let item of bitacoraItems">
+    <div class="table-cell">{{ item.fechaInicio }}</div>
+    <div class="table-cell">{{ item.fechaFin }}</div>
+    <div class="table-cell">{{ item.encargado }}</div>
+    <div class="table-cell">{{ item.nombreCliente }}</div>
+    <div class="table-cell">{{ item.tipoEquipo }}</div>
+    <div class="table-cell">
+      <p-button
           label="Ver"
           styleClass="w-full"
-          (click)="verObservaciones(item)"
+          (click)="goToRouteObservacion()"
           [style]="{ 'background-color': '#007bff0a', 'color': '#222121', 'border-color': '#007bff09' }"
-        ></p-button></td>
-    </tr>
-  </tbody>
-</table>
+        ></p-button>
+    </div>
+  </div>
+
+  <div class="table-row">
+    <div class="table-cell"></div>
+    <div class="table-cell"></div>
+    <div class="table-cell"></div>
+    <div class="table-cell"></div>
+    <div class="table-cell">
+      <p-button
+       label="Regresar"
+       styleClass="w-full"
+       (click)="goToRouteRegresar()"
+       [style]="{ 'background-color': '#007bff0a', 'color': '#222121', 'border-color': '#007bff09' }"
+></p-button>
+    </div>
+    <div class="table-cell">
+      <p-button
+       label="Cerrar Sesión"
+       styleClass="w-full"
+       (click)="goToRouteCerrar()"
+       [style]="{ 'background-color': '#007bff0a', 'color': '#222121', 'border-color': '#007bff09' }"
+></p-button>
+    </div>
+  </div>
+</div>
+
   </p-card>
-  </form>
+</form>
+

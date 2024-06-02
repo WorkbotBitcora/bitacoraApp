@@ -17,7 +17,12 @@ import { BitacoraComponent } from './components/bitacora/bitacora.component';
 
 const routes: Routes = [
   {
-    path:'',
+path:'',
+
+component: BitacoraCComponent,
+},
+  {
+    path:'bitacora',
     component:BitacoraComponent
   },
 {
@@ -48,11 +53,7 @@ const routes: Routes = [
   component: AgendaComponent,
 
 },
-  {
-path:'bitacoraCliente',
 
-component: BitacoraCComponent,
-},
   {
     path: 'typeUser',
     component: TypeUserComponent,
