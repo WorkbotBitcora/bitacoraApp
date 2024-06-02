@@ -1,1 +1,59 @@
-<p>observaciones works!</p>
+<div class="observaciones-box">
+    <!-- Título -->
+    <h2>Observaciones</h2>
+    <br>
+
+    <div class="cuadro-inferior">
+        <label for="mejoras-realizadas-del-sistema">Recomendaciones del sistema</label>
+        <br>
+        <div class="textwrapper">
+            <textarea id="mejoras-realizadas-del-sistema" name="mejoras-realizadas-del-sistema" rows="4" readonly></textarea>
+        </div>
+    </div>
+
+    <br>
+
+    <!-- Cuadros inferiores -->
+    <div class="cuadro-inferior">
+        <label for="descripcion">Descripción</label>
+        <br>
+        <div class="textwrapper">
+            <textarea id="descripcion" name="descripcion" rows="4"></textarea>
+        </div>
+    </div>
+
+    <div class="cuadro-inferior">
+        <br>
+        <label for="mejoras">Mejoras realizadas:</label>
+        <br>
+        <div class="textwrapper">
+            <textarea id="mejoras" name="mejoras" rows="4"></textarea>
+        </div>
+    </div>
+    <br>
+
+    <!-- Espacio entre los botones -->
+    <div style="display: flex; justify-content: space-between;">
+        <div class="field" style="margin-right: 10px;">
+            <a routerLink="/">
+                <p-button
+                    label="Siguiente"
+                    styleClass="w-full"
+                    type="submit"
+                    [style]="{ 'background-color': '#007bff0a', 'color': '#222121', 'border': '2px solid black' }"
+                ></p-button>
+            </a>
+        </div>
+
+        <div class="field" style="margin-left: 10px;">
+            <a routerLink="/">
+                <p-button
+                    label="Cancelar"
+                    styleClass="w-full"
+                    type="submit"
+                    [style]="{ 'background-color': '#007bff0a', 'color': '#222121', 'border': '2px solid black' }"
+                ></p-button>
+            </a>
+        </div>
+    </div>
+</div>

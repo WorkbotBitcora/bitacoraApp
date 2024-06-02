@@ -12,8 +12,12 @@ import { DescripcionPortatilComponent } from './components/descripcion-portatil/
 import { AgendaComponent } from './components/agenda/agenda.component';
 import { RegistroequiposComponent } from './components/registroequipos/registroequipos.component';
 import { CheckportatilComponent } from './components/checkportatil/checkportatil.component';
-import { BitacoraComponent } from './components/bitacora/bitacora.component';
 
+import { BitacoraComponent } from './components/bitacora/bitacora.component';
+import { CheckcelularComponent } from './components/checkcelular/checkcelular.component';
+import { CheckmesaComponent } from './components/checkmesa/checkmesa.component';
+import { ObservacionesComponent } from './components/observaciones/observaciones.component';
+import { ClienteComponent } from './components/cliente/cliente.component';
 
 const routes: Routes = [
   {
@@ -28,31 +32,59 @@ component: BitacoraCComponent,
 {
   path:'descripcionCelular',//descripcionCelular
   component:DescripcionCelularComponent
+
+
+
+
+
+const routes: Routes = [{
+
+  path: 'observaciones',
+  component: ObservacionesComponent
 },
 {
-  path:'descripcionMesa',
-  component:DescripcionMesaComponent
+  path: 'mesa',
+  component: CheckmesaComponent
+
 },
 {
-  path:'descripcionPortatil',
-  component:DescripcionPortatilComponent
+  path: 'celular',
+  component: CheckcelularComponent
 },
-  {
+{
+  path: 'portatil',
+  component: CheckportatilComponent
+},
+
+{
+  path: 'descripcionCelular',//descripcionCelular
+  component: DescripcionCelularComponent
+},
+{
+  path: 'descripcionMesa',
+  component: DescripcionMesaComponent
+},
+{
+  path: 'descripcionPortatil',
+  component: DescripcionPortatilComponent
+},
+{
   path: 'checkportatil',
   component: CheckportatilComponent
 },
 
 
-  {
-  path: 'registroEquipo',
+{
+  path: 'nombre',
   component: RegistroequiposComponent
 
 },
 {
-  path : 'agendaCom',
+  path: 'agendaCom',
   component: AgendaComponent,
 
 },
+
 
   {
     path: 'typeUser',
@@ -70,15 +102,39 @@ component: BitacoraCComponent,
     component: TecnicoComponent
   },
 
+{
+  path: 'bitacoraCliente',
 
-  {
-    path: 'register',
-    component: RegisterComponent,
-  },
+  component: BitacoraCComponent,
+},
+{
+  path: '',
+  component: TypeUserComponent,
+  pathMatch: 'full',
+},
+{
+  path: 'login',
+  component: LoginComponent,
+},
+{
+  path: 'tecnico',
+  component: TecnicoComponent
+},
+{
+  path:'usuario' , 
+  component: ClienteComponent
+
+
+},
+
+{
+  path: 'register',
+  component: RegisterComponent,
+},
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

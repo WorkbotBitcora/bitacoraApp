@@ -45,11 +45,77 @@
 </head>
 <body>
     <h1>Componentes del portátil</h1>
-    <div class="seleccionable">
-        <div class="recuadro"></div>
-        <div class="nombre">Batería</div>
-        <div class="chulo">✓</div>
+    <br>
+    <div class="input-box">
+        <label><input type="checkbox"> Bateria </label>
     </div>
-    <!-- Repite lo mismo para los demás componentes -->
+    <br>
+    <div class="input-box">
+        <label><input type="checkbox"> Pantalla </label>
+    </div>
+    <br>
+    <div class="input-box">
+        <label><input type="checkbox"> Sistema Operativo </label>
+    </div>
+    <br>
+    <div class="input-box">
+        <label><input type="checkbox"> Controladores </label>
+    </div>
+    <br>
+    <div class="input-box">
+        <label><input type="checkbox"> Programas </label>
+    </div>
+    <br>
+    <div class="input-box">
+        <label><input type="checkbox"> Seguridad </label>
+    </div>
+    <br>
+    <div class="input-box">
+        <label><input type="checkbox"> Pruebas de rendimiento </label>
+    </div>
+    <br>
+    <div class="input-box">
+        <label><input type="checkbox"> Temperatura </label>
+    </div>
+    <br>
+    <div class="input-box">
+        <label><input type="checkbox"> Camaras y sensores </label>
+    </div>
+    <br>
+    <div class="input-box">
+        <label><input type="checkbox"> Teclado y touchpad </label>
+    </div>
+    <br>
+    <div class="input-box">
+        <label><input type="checkbox"> Conexiones </label>
+    </div>
+    
+    <br>
+    <div class="field">
+        <a routerLink="/observaciones">
+            <p-button
+                label="Siguiente"
+                styleClass="w-full"
+                type="submit"
+                [style]="{ 'background-color': '#007bff0a', 'color': '#222121', 'border-color': '#007bff09' }"
+              ></p-button>
+          </a>
+    </div> 
+    
+
+    <div class="field">
+        <a routerLink="/login">
+            <p-button
+                label="Cancelar"
+                styleClass="w-full"
+                type="submit"
+                [style]="{ 'background-color': '#007bff0a', 'color': '#222121', 'border-color': '#007bff09' }"
+              ></p-button>
+          </a>
+    </div> 
+    
+
+
+    
 </body>
 </html>
