@@ -12,7 +12,6 @@ import { DescripcionPortatilComponent } from './components/descripcion-portatil/
 import { AgendaComponent } from './components/agenda/agenda.component';
 import { RegistroequiposComponent } from './components/registroequipos/registroequipos.component';
 import { CheckportatilComponent } from './components/checkportatil/checkportatil.component';
-
 import { BitacoraComponent } from './components/bitacora/bitacora.component';
 import { CheckcelularComponent } from './components/checkcelular/checkcelular.component';
 import { CheckmesaComponent } from './components/checkmesa/checkmesa.component';
@@ -20,121 +19,28 @@ import { ObservacionesComponent } from './components/observaciones/observaciones
 import { ClienteComponent } from './components/cliente/cliente.component';
 
 const routes: Routes = [
-  {
-path:'',
-
-component: BitacoraCComponent,
-},
-  {
-    path:'bitacora',
-    component:BitacoraComponent
-  },
-{
-  path:'descripcionCelular',//descripcionCelular
-  component:DescripcionCelularComponent
-
-
-
-
-
-const routes: Routes = [{
-
-  path: 'observaciones',
-  component: ObservacionesComponent
-},
-{
-  path: 'mesa',
-  component: CheckmesaComponent
-
-},
-{
-  path: 'celular',
-  component: CheckcelularComponent
-},
-{
-  path: 'portatil',
-  component: CheckportatilComponent
-},
-
-{
-  path: 'descripcionCelular',//descripcionCelular
-  component: DescripcionCelularComponent
-},
-{
-  path: 'descripcionMesa',
-  component: DescripcionMesaComponent
-},
-{
-  path: 'descripcionPortatil',
-  component: DescripcionPortatilComponent
-},
-{
-  path: 'checkportatil',
-  component: CheckportatilComponent
-},
-
-
-{
-  path: 'nombre',
-  component: RegistroequiposComponent
-
-},
-{
-  path: 'agendaCom',
-  component: AgendaComponent,
-
-},
-
-
-  {
-    path: 'typeUser',
-    component: TypeUserComponent,
-    pathMatch: 'full',
-
-
-  },
-  {
-    path: 'login',
-    component: LoginComponent,
-  },
-  {
-    path: 'tecnico',
-    component: TecnicoComponent
-  },
-
-{
-  path: 'bitacoraCliente',
-
-  component: BitacoraCComponent,
-},
-{
-  path: '',
-  component: TypeUserComponent,
-  pathMatch: 'full',
-},
-{
-  path: 'login',
-  component: LoginComponent,
-},
-{
-  path: 'tecnico',
-  component: TecnicoComponent
-},
-{
-  path:'usuario' , 
-  component: ClienteComponent
-
-
-},
-
-{
-  path: 'register',
-  component: RegisterComponent,
-},
+  { path: 'observaciones', component: ObservacionesComponent },
+  { path: '', component: BitacoraCComponent },
+  { path: 'descripcionCelular', component: DescripcionCelularComponent },
+  { path: 'bitacora', component: BitacoraComponent },
+  { path: 'mesa', component: CheckmesaComponent },
+  { path: 'celular', component: CheckcelularComponent },
+  { path: 'portatil', component: CheckportatilComponent },
+  { path: 'descripcionMesa', component: DescripcionMesaComponent },
+  { path: 'descripcionPortatil', component: DescripcionPortatilComponent },
+  { path: 'checkportatil', component: CheckportatilComponent },
+  { path: 'nombre', component: RegistroequiposComponent },
+  { path: 'agendaCom', component: AgendaComponent },
+  { path: 'typeUser', component: TypeUserComponent, pathMatch: 'full' },
+  { path: 'login', component: LoginComponent },
+  { path: 'tecnico', component: TecnicoComponent },
+  { path: 'bitacoraCliente', component: BitacoraCComponent },
+  { path: 'usuario', component: ClienteComponent },
+  { path: 'register', component: RegisterComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

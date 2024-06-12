@@ -67,7 +67,7 @@ import { ClienteComponent } from './components/cliente/cliente.component';
       CheckportatilComponent,
       CheckcelularComponent,
 
-      BitacoraComponent
+      BitacoraComponent,
 
       ClienteComponent
 
