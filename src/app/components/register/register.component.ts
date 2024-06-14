@@ -2,9 +2,11 @@ import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { MessageService } from 'primeng/api';
-import { User } from 'src/app/interfaces/auth';
+import { registerCredentials } from 'src/app/interfaces/registerCredentials';
+import { IResponseRegister } from 'src/app/interfaces/registerResponse';
 import { AuthService } from 'src/app/services/auth.service';
 import { passwordMatchValidator } from 'src/app/shared/password-match.directive';
+// aqui va el service
 
 @Component({
   selector: 'app-register',
@@ -14,10 +16,10 @@ import { passwordMatchValidator } from 'src/app/shared/password-match.directive'
 export class RegisterComponent {
 
   registerForm = this.fb.group({
-    Name: ['', [Validators.required, Validators.pattern(/^[a-zA-Z]+(?: [a-zA-Z]+)*$/)]],
-    lastName: ['', [Validators.required, Validators.pattern(/^[a-zA-Z]+(?: [a-zA-Z]+)*$/)]],
-    user: ['', [Validators.required, Validators.pattern (/^[a-zA-Z]+(?: [a-zA-Z]+)*$/)]],
-    password: ['', Validators.required],
+    nombre: ['', [Validators.required, Validators.pattern(/^[a-zA-Z]+(?: [a-zA-Z]+)*$/)]],
+    apellido: ['', [Validators.required, Validators.pattern(/^[a-zA-Z]+(?: [a-zA-Z]+)*$/)]],
+    usuario: ['', [Validators.required, Validators.pattern(/^[a-zA-Z]+(?: [a-zA-Z]+)*$/)]],
+    contrasena: ['', Validators.required],
     confirmPassword: ['', Validators.required]
   }, {
     validators: passwordMatchValidator
@@ -30,21 +32,21 @@ export class RegisterComponent {
     private router: Router
   ) { }
 
-  get Name() {
-    return this.registerForm.controls['Name'];
+  get nombre() {
+    return this.registerForm.controls['nombre'];
   }
 
-  get lastName() {
-    return this.registerForm.controls['lastName'];
+  get apellido() {
+    return this.registerForm.controls['apellido'];
   }
 
 
-  get user() {
-    return this.registerForm.controls['user'];
+  get usuario() {
+    return this.registerForm.controls['usuario'];
   }
 
-  get password() {
-    return this.registerForm.controls['password'];
+  get contrasena() {
+    return this.registerForm.controls['contrasena'];
   }
 
   get confirmPassword() {
@@ -52,18 +54,25 @@ export class RegisterComponent {
   }
 
   submitDetails() {
-    const postData = { ...this.registerForm.value };
+    const postData = { ...this.registerForm.value, idTipoUsuario: 1 };
     delete postData.confirmPassword;
-    this.authService.registerUser(postData as User).subscribe(
-      response => {
-        console.log(response);
+    console.log(postData)
+
+    this.authService.registerUser(postData as registerCredentials).subscribe(
+      
+      (response: IResponseRegister) => {
+        
+        console.log(response)
         this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Register successfully' });
-        this.router.navigate(['login'])
+         this.router.navigate(['login'])
       },
       error => {
+        console.log(error)
         this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Something went wrong' });
       }
     )
+
+
   }
 
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
             padding: 10px;
             margin-bottom: 10px;
         }
+
         /* Estilos para el botón de revisión */
         .btn-revision {
             background-color: #007bff;
@@ -21,30 +23,28 @@
         }
     </style>
 </head>
+
 <body>
     <h1>Registro de Equipos</h1>
     <div class="input-box">
-        <label for="id">ID:</label>
-        <input type="text" id="id" placeholder="Ingrese el ID">
+        <label for="id">ID: {{idRevision}}</label>
     </div>
     <div class="input-box">
-        <label for="fecha">Fecha:</label>
-        <input type="date" id="fecha">
+        <label for="nombreCliente">Nombre del Cliente: {{nombreCliente}}</label>
     </div>
-    <div class="input-box">
-        <label for="nombreCliente">Nombre del Cliente:</label>
-        <input type="text" id="nombreCliente" placeholder="Ingrese el nombre del cliente">
-    </div>
-    <h2>Tipo de Equipo</h2>
-    <div class="input-box">
-        <label><input type="radio" name="tipoEquipo" value="Mesa"> Mesa</label>
-        <label><input type="radio" name="tipoEquipo" value="Portátil"> Portátil</label>
-        <label><input type="radio" name="tipoEquipo" value="Celular"> Celular</label>
-    </div>
-    <div class="input-box">
-        <label for="marca">Marca:</label>
-        <input type="text" id="marca" placeholder="Ingrese la marca">
-    </div>
-    <button class="btn-revision">Revisión</button>
+    <form [formGroup]="registerEquipoForm" (ngSubmit)="submitDetails()">
+        <h2>Tipo de Equipo</h2>
+        <div class="input-box">
+            <label><input type="radio" formControlName="tipoEquipo" name="tipoEquipo" value=4> Mesa</label>
+            <label><input type="radio" formControlName="tipoEquipo" name="tipoEquipo" value=3> Portátil</label>
+            <label><input type="radio" formControlName="tipoEquipo" name="tipoEquipo" value=2> Celular</label>
+        </div>
+        <div class="input-box">
+            <label for="marca">Marca:</label>
+            <input type="text" pInputText formControlName="marca" id="marca" placeholder="Ingrese la marca">
+        </div>
+        <p-button label="Register" styleClass="w-full" [disabled]="registerEquipoForm.invalid" type="submit"></p-button>
+    </form>
 </body>
+
 </html>

@@ -44,40 +44,42 @@
     </style>
 </head>
 <body>
-    <h1>Componentes de celular</h1>
+
+    <form [formGroup]="registerChekCelularForm" (ngSubmit)="submitDetails()">
+        <h1>Componentes de celular</h1>
     <br>
     <div class="input-box">
-        <label><input type="checkbox"> Estado exterior </label>
+        <label><input type="checkbox" formControlName="chek1" name="chek1" value="true"> Estado exterior </label>
     </div>
     <br>
     <div class="input-box">
-        <label><input type="checkbox"> Pantalla </label>
+        <label><input type="checkbox" formControlName="chek2" name="chek2" value="true"> Pantalla </label>
     </div>
     <br>
     <div class="input-box">
-        <label><input type="checkbox"> Botones y puertos </label>
+        <label><input type="checkbox"  formControlName="chek3" name="chek3" value="true"> Botones y puertos </label>
     </div>
     <br>
     <div class="input-box">
-        <label><input type="checkbox"> Camras </label>
+        <label><input type="checkbox" formControlName="chek4" name="chek4" value="true"> Camaras </label>
     </div>
     <br>
     <div class="input-box">
-        <label><input type="checkbox"> Altavoces y microfono </label>
+        <label><input type="checkbox" formControlName="chek5" name="chek5" value="true"> Altavoces y microfono </label>
     </div>
     <br>
     <div class="input-box">
-        <label><input type="checkbox"> Sensores y funciones especiales </label>
+        <label><input type="checkbox" formControlName="chek6" name="chek6" value="true"> Sensores y funciones especiales </label>
     </div>
     <br>
     <div class="input-box">
-        <label><input type="checkbox"> Condiciones de la bateria  </label>
+        <label><input type="checkbox" formControlName="chek7" name="chek7" value="true"> Condiciones de la bateria  </label>
     </div>
     <br>
     <div class="input-box">
-        <label><input type="checkbox"> Software  </label>
+        <label><input type="checkbox"value="30"> Software  </label>
     </div>
-  
+    </form>
     
     <br>
     <div class="field">

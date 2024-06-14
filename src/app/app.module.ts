@@ -39,6 +39,7 @@ import { CheckcelularComponent } from './components/checkcelular/checkcelular.co
 import { BitacoraComponent } from './components/bitacora/bitacora.component';
 
 import { ClienteComponent } from './components/cliente/cliente.component';
+import { AgendaPorClienteComponent } from './components/agenda-por-cliente/agenda-por-cliente.component';
 
 
 
@@ -67,9 +68,10 @@ import { ClienteComponent } from './components/cliente/cliente.component';
       CheckportatilComponent,
       CheckcelularComponent,
 
-      BitacoraComponent
+      BitacoraComponent,
 
-      ClienteComponent
+      ClienteComponent,
+        AgendaPorClienteComponent
 
 
 

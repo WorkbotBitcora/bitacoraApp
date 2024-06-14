@@ -1,6 +1,10 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { MessageService } from 'primeng/api';
+import { IBitacora } from 'src/app/interfaces/bitacora';
+import { BitacoraService } from 'src/app/services/bitacora/bitacora.service';
+import { delay, tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-bitacora',
@@ -9,21 +13,38 @@ import { Router } from '@angular/router';
 })
 export class BitacoraComponent {
 
-  bitacoraItems = [
-    { fechaInicio: '02/08/2021', fechaFin: '02/09/2021', encargado: 'Andres', nombreCliente: 'Pedro', tipoEquipo: 'Portatil' },
-    // Agrega más elementos aquí
-  ];
-
   constructor(
     private fb: FormBuilder,
-    private router: Router
+    private router: Router,
+    private bitacoraService: BitacoraService,
+    private msgService: MessageService
   ) { }
+
+  bitacoraItems: IBitacora[] = [];
+
 
   @Output() userTypeChanged = new EventEmitter<string>();
 
   typeUserForm = this.fb.group({
     userTypeName: ['', [Validators.required, Validators.pattern(/^[a-zA-Z]+(?: [a-zA-Z]+)*$/)]],
   });
+
+  ngOnInit() {
+   this.bitacoraItems = [];
+    this.bitacoraService.getBitacoras().subscribe(
+      (response: IBitacora[]) => {
+        if (response) {
+          this.bitacoraItems = response;
+        } else {
+          this.msgService.add({ severity: 'error', summary: 'Error', detail: 'No se lograron consultar las bitacoras' });
+        }
+      },
+      (error) => {
+
+        this.msgService.add({ severity: 'error', summary: 'Error', detail: 'Algo salió mal' });
+      }
+    );
+  }
 
   onSubmit() {
     if (this.typeUserForm.valid) {
@@ -36,17 +57,22 @@ export class BitacoraComponent {
       }
     }
   }
-  goToRouteObservacion() {
-  this.router.navigate(['/route1']);
+  
+  goToRouteRevisar(bitacora:IBitacora) {
+    localStorage.setItem('bitacora', JSON.stringify(bitacora))
+    /**
+     * para recuperarlo 
+     * const{selectBitacora} ...
+     * selectBitacora = JSON.parse(localStorage.getItem('key'))
+     */
+    this.router.navigate(['/registroequipo']);
   }
 
   goToRouteRegresar() {
-  this.router.navigate(['/route2']);
+    this.router.navigate(['/tecnico']);
   }
 
-  goToRouteCerrar() {
-  this.router.navigate(['/route3']);
-  }
+  
 
   verObservaciones(item: any) {
     console.log('Observaciones:', item.observaciones);
@@ -58,5 +84,11 @@ export class BitacoraComponent {
     console.log("Tipo de usuario enviado:", userType);
     // this.authService.enviarTipoUsuario(userType).subscribe(...);
     this.router.navigate(['login']);
+  }
+
+  logOut() {
+    localStorage.clear();
+    this.router.navigate(['/login']);
+    console.log("entro al logOut")
   }
 }

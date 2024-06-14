@@ -3,11 +3,14 @@
     <!-- Resto del formulario de inicio de sesión -->
     <div class="field">
       <label for="username">Usuario</label>
+
       <input type="text" pInputText formControlName="username" class="w-full" name="username" placeholder="Carlos123" />
+      
       <small *ngIf="username.invalid && (username.dirty || username.touched)" class="block p-error">
-        <div *ngIf="username.errors?.['required']">El correo es requerido.</div>
-        <div *ngIf="username.errors?.['username']">El correo no es válido</div>
+        <div *ngIf="username.errors?.['required']">El nombre de Usuario es requerido.</div>
       </small>
+
+      
     </div>
     <div class="field">
       <label for="password">Contraseña</label>

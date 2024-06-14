@@ -5,6 +5,7 @@ import { MessageService } from 'primeng/api';
 import { IUserCredentials } from 'src/app/interfaces/userCredentials';
 import { IUserLogged } from 'src/app/interfaces/userLogged';
 import { AuthService } from 'src/app/services/auth.service';
+
 import { UserTypeService } from 'src/app/services/type-user.service'; // Importa el servicio UserTypeService
 
 @Component({
@@ -12,6 +13,7 @@ import { UserTypeService } from 'src/app/services/type-user.service'; // Importa
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
+
 export class LoginComponent implements OnInit {
   userType: string = '';
 
@@ -27,6 +29,7 @@ export class LoginComponent implements OnInit {
     private msgService: MessageService,
     private userTypeService: UserTypeService // Inyecta el servicio UserTypeService
   ) { }
+
 
   ngOnInit() {
     this.userTypeService.userTypeChanged.subscribe((userType) => {

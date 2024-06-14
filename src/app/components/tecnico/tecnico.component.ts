@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import {
   FormBuilder,
   FormGroup,
@@ -18,7 +18,10 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
   templateUrl: './tecnico.component.html',
   styleUrls: ['./tecnico.component.css']
 })
-export class TecnicoComponent {
+export class TecnicoComponent implements OnInit{
+  
+  nombreTecnico: string  = '';
+
   typeUserForm = this.fb.group({
     Name: ['', [Validators.required, Validators.pattern(/^[a-zA-Z]+(?: [a-zA-Z]+)*$/)]],
 
@@ -28,8 +31,17 @@ export class TecnicoComponent {
     private fb: FormBuilder,
     private authService: AuthService,
     private messageService: MessageService,
-    private router: Router
+    private router: Router, 
+    
   ) { }
+
+
+
+
+  ngOnInit(): void {
+    this.nombreTecnico = localStorage.getItem('username')|| "SIN NOMBRE" ;
+  }
+
   onSubmit() {
     // Lógica para manejar el envío del formulariof
     console.log('Formulario enviado');

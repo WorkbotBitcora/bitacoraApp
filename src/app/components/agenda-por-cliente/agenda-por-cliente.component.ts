@@ -1,4 +1,4 @@
-import { Component,Output ,EventEmitter } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { MessageService } from 'primeng/api';
@@ -6,11 +6,11 @@ import { IBitacora } from 'src/app/interfaces/bitacora';
 import { BitacoraService } from 'src/app/services/bitacora/bitacora.service';
 
 @Component({
-  selector: 'app-agendacompletadas',
-  templateUrl: './agendacompletadas.component.html',
-  styleUrls: ['./agendacompletadas.component.css']
+  selector: 'app-agenda-por-cliente',
+  templateUrl: './agenda-por-cliente.component.html',
+  styleUrls: ['./agenda-por-cliente.component.css']
 })
-export class AgendacompletadasComponent {
+export class AgendaPorClienteComponent {
 
   constructor(
     private fb: FormBuilder,
@@ -29,8 +29,9 @@ export class AgendacompletadasComponent {
   });
 
   ngOnInit() {
-   this.bitacoraItems = [];
-    this.bitacoraService.getBitacorasCompletadas().subscribe(
+    this.bitacoraItems = [];
+    const id = localStorage.getItem('userId') || "";
+    this.bitacoraService.getBitacorasByUSer(id).subscribe(
       (response: IBitacora[]) => {
         if (response) {
           this.bitacoraItems = response;
@@ -56,19 +57,18 @@ export class AgendacompletadasComponent {
       }
     }
   }
-  
-  goToRouteRevisar(bitacora:IBitacora) {
-    localStorage.setItem('bitacora', JSON.stringify(bitacora))
-    /**
-     * para recuperarlo 
-     * const{selectBitacora} ...
-     * selectBitacora = JSON.parse(localStorage.getItem('key'))
-     */
-    this.router.navigate(['/registroequipo']);
+
+  goToRouteObservacion(bitacora: IBitacora) {
+
+    this.router.navigate(['/route1']);
   }
 
   goToRouteRegresar() {
-    this.router.navigate(['/tecnico']);
+    this.router.navigate(['/usuario']);
+  }
+
+  goToRouteCerrar() {
+    this.router.navigate(['/route3']);
   }
 
   verObservaciones(item: any) {
@@ -81,12 +81,5 @@ export class AgendacompletadasComponent {
     console.log("Tipo de usuario enviado:", userType);
     // this.authService.enviarTipoUsuario(userType).subscribe(...);
     this.router.navigate(['login']);
-  }
-
-  logOut() {
-
-    localStorage.clear();
-    this.router.navigate(['/login']);
-    console.log("entro al logOut")
   }
 }

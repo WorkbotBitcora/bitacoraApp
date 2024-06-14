@@ -1,5 +1,4 @@
 
-
 <form [formGroup]="typeUserForm" (ngSubmit)="onSubmit()">
     <p-card header="Bitacora" [style]="{ width: '800px', 'text-align': 'center'  }">
       <div class="table-container">
@@ -8,7 +7,6 @@
       <div class="table-cell">FECHA INICIO</div>
       <div class="table-cell">CLIENTE</div>
       <div class="table-cell">ESTADO</div>
-      <div class="table-cell"></div>
     </div>
   
     <div class="table-row" *ngFor="let item of bitacoraItems">
@@ -16,14 +14,6 @@
       <div class="table-cell">{{ item.fechaEntrada }}</div>
       <div class="table-cell">{{ item.usuario.nombre }}</div>
       <div class="table-cell">{{ item.estado.nombre }}</div>
-      <div class="table-cell">
-        <p-button
-            label="Revisar"
-            styleClass="w-full"
-            (click)="goToRouteRevisar(item)"
-            [style]="{ 'background-color': '#007bff0a', 'color': '#222121', 'border-color': '#007bff09' }"
-          ></p-button>
-      </div>
     </div>
   
     <div class="table-row">
@@ -36,14 +26,6 @@
          label="Regresar"
          styleClass="w-full"
          (click)="goToRouteRegresar()"
-         [style]="{ 'background-color': '#007bff0a', 'color': '#222121', 'border-color': '#007bff09' }"
-  ></p-button>
-      </div>
-      <div class="table-cell">
-        <p-button
-         label="Cerrar Sesión"
-         styleClass="w-full"
-         (click)="logOut()"
          [style]="{ 'background-color': '#007bff0a', 'color': '#222121', 'border-color': '#007bff09' }"
   ></p-button>
       </div>

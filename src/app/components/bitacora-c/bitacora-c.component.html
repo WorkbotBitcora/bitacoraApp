@@ -1,10 +1,12 @@
 <form [formGroup]="biteClientForm" (ngSubmit)="onSubmit()">
-  <p-card header="Generar Agenda" [style]="{ width: '360px' ,'text-align': 'center'}"></p-card>
+  <p-card header="Generar Agenda"
+    [style]="{ width: '360px' ,'display': 'flex', 'justify-content': 'center', 'align-items': 'center'}"></p-card>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <p><div class="field">
-    <label for="name" >NOMBRE</label>
-    <input [style]="{ 'text-align': 'center'}" type="text" id="name" name="name" value="ANDRES" disabled>
+  <p>
+  <div class="field">
+    <label for="name">NOMBRE</label>
+    <input [style]="{ 'text-align': 'center'}" type="text" id="name" name="name" value="{{nombreUsuario}}" disabled>
   </div>
 
   <div class="field">
@@ -14,37 +16,16 @@
   </div>
   <div class="form-group">
     <label for="description">DESCRIPCION</label>
-    <p><textarea id="description" name="description" class="custom-textarea"
-      rows="6" placeholder="Ingresa tu texto aquí" styleClass="w-full"
-       [style]="{ width: '360px' ,'text-align': 'center'}"></textarea><</p>
+    <p><textarea id="description" name="description" class="custom-textarea" rows="6"
+        placeholder="Ingresa tu texto aquí" styleClass="w-full"
+        [style]="{ width: '360px' ,'text-align': 'center'}"></textarea></p>
   </div>
   <div class="field">
-
-      <p-button
-  label="Enviar"
-  styleClass="w-1/3"
-  type="submit"
-  [style]="{ 'background-color': '#007bff0a', 'color': '#222121', 'border-color': '#007bff09' }"
-></p-button>
-
-
-      <p-button
-  label="Cancelar"
-  styleClass="w-1/3"
-  type="submit"
-  [style]="{ 'background-color': '#007bff0a', 'color': '#222121', 'border-color': '#007bff09' }"
-></p-button>
-
-
-      <p-button
-  label="Cerrar Sesion"
-  styleClass="w-2/3"
-  type="submit"
-  [style]="{ 'background-color': '#007bff0a', 'color': '#222121', 'border-color': '#007bff09' }"
-></p-button>
-
+    <a routerLink="/usuario">
+      <p-button label="Enviar" styleClass="w-1/3" (click)="onSubmit()"
+      [style]="{ 'background-color': '#007bff0a', 'color': '#222121', 'border-color': '#007bff09' }"></p-button>
+</a>
+    
   </div>
 
 </form>
-
-

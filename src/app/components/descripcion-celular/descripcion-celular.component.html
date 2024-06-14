@@ -1,21 +1,4 @@
-<!--<form [formGroup]="typeUserForm" (ngSubmit)="onSubmit()">
-  <p-card header="Descripción" [style]="{ width: '360px', 'text-align': 'center' }">
-    <div class="field" *ngFor="let opcion of opciones">
-      <input type="checkbox" id="miCheckbox{{ opcion.value }}" name="miCheckbox" [value]="opcion.value" class="bigText">
-      <label for="miCheckbox{{ opcion.value }}"> {{ opcion.label }}</label>
-    </div>
-  </p-card>
-</form>-->
-<!--<form [formGroup]="typeUserForm" (ngSubmit)="onSubmit()">
-  <p-card header="Descripción" [style]="{ width: '360px', 'text-align': 'center' }">
-    <div class="field" *ngFor="let opcion of opciones">
-      <input type="checkbox" id="miCheckbox{{ opcion.value }}" name="miCheckbox" [value]="opcion.value" class="bigText">
-      <label for="miCheckbox{{ opcion.value }}"> {{ opcion.label }}</label>-->
-      <!-- Campo de entrada oculto para almacenar el valor numérico -->
-     <!--> <input type="hidden" [formControlName]="opcion.value" [value]="convertirValor(opcion.value)">
-    </div>
-  </p-card>
-</form>-->
+
 <form [formGroup]="typeUserForm" (ngSubmit)="onSubmit()">
   <p-card header="Descripción Celular" [style]="{ width: '360px', 'text-align': 'left'  }">
     <div class="field" *ngFor="let opcion of opciones">

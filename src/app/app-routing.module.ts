@@ -18,27 +18,13 @@ import { CheckcelularComponent } from './components/checkcelular/checkcelular.co
 import { CheckmesaComponent } from './components/checkmesa/checkmesa.component';
 import { ObservacionesComponent } from './components/observaciones/observaciones.component';
 import { ClienteComponent } from './components/cliente/cliente.component';
-
-const routes: Routes = [
-  {
-path:'',
-
-component: BitacoraCComponent,
-},
-  {
-    path:'bitacora',
-    component:BitacoraComponent
-  },
-{
-  path:'descripcionCelular',//descripcionCelular
-  component:DescripcionCelularComponent
-
-
-
+import { FormsModule } from '@angular/forms';
+import { AgendaPorClienteComponent } from './components/agenda-por-cliente/agenda-por-cliente.component';
+import { AgendacompletadasComponent } from './components/agendacompletadas/agendacompletadas.component';
 
 
 const routes: Routes = [{
-
+  //OBSERVACIONES ESTO FINALIZA LA REVISION 
   path: 'observaciones',
   component: ObservacionesComponent
 },
@@ -48,6 +34,11 @@ const routes: Routes = [{
 
 },
 {
+  //ESTA ES LA AGENDA DE EL TECNICO PARA REVISAR 
+  path:'bitacora',
+  component:BitacoraComponent
+},
+{
   path: 'celular',
   component: CheckcelularComponent
 },
@@ -55,7 +46,13 @@ const routes: Routes = [{
   path: 'portatil',
   component: CheckportatilComponent
 },
-
+{
+  //aqui trae  la lista de bitacoras que tiene un cliente
+  path: 'agendaporcliente',
+  component: AgendaPorClienteComponent
+},
+/*
+NOTA TOCA VOLVER A HACER ESTO !!!!!!!!!
 {
   path: 'descripcionCelular',//descripcionCelular
   component: DescripcionCelularComponent
@@ -72,22 +69,24 @@ const routes: Routes = [{
   path: 'checkportatil',
   component: CheckportatilComponent
 },
-
+*/
 
 {
-  path: 'nombre',
+  //esta es el componente de actualizacion del equipo
+  path: 'registroequipo',
   component: RegistroequiposComponent
 
 },
 {
-  path: 'agendaCom',
-  component: AgendaComponent,
+  //estas son la visata de las agendas completadas 
+  path: 'agendacom',
+  component: AgendacompletadasComponent,
 
 },
 
-
+/*
   {
-    path: 'typeUser',
+    path: '',
     component: TypeUserComponent,
     pathMatch: 'full',
 
@@ -98,29 +97,34 @@ const routes: Routes = [{
     component: LoginComponent,
   },
   {
+    //
     path: 'tecnico',
     component: TecnicoComponent
-  },
+  },*/
 
 {
-  path: 'bitacoraCliente',
-
+  //esta es generar agenda desde el cliente 
+  path: 'bitacoracliente',
   component: BitacoraCComponent,
 },
 {
+  //este es el inicio de la aplicacion
   path: '',
   component: TypeUserComponent,
   pathMatch: 'full',
 },
 {
+  //este es el login
   path: 'login',
   component: LoginComponent,
 },
 {
+  //estas son la opciones del tecnico
   path: 'tecnico',
   component: TecnicoComponent
 },
 {
+  //esta son las opciones del cliente 
   path:'usuario' , 
   component: ClienteComponent
 
@@ -128,6 +132,7 @@ const routes: Routes = [{
 },
 
 {
+  //esta es la pesta;a de registro
   path: 'register',
   component: RegisterComponent,
 },
@@ -137,4 +142,5 @@ const routes: Routes = [{
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
+
 export class AppRoutingModule { }

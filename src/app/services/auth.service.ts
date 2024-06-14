@@ -4,6 +4,8 @@ import { User } from '../interfaces/auth';
 import { Observable } from 'rxjs';
 import { IUserCredentials } from '../interfaces/userCredentials';
 import { IUserLogged } from '../interfaces/userLogged';
+import { registerCredentials } from '../interfaces/registerCredentials';
+import { IResponseRegister } from '../interfaces/registerResponse';
 
 @Injectable({
   providedIn: 'root'
@@ -18,8 +20,8 @@ export class AuthService {
     return this.http.post<IUserLogged>(`${this.baseUrl}/Authentication/log`, user  );
   }
 
-  registerUser(userDetails: User) {
-    return this.http.post(`${this.baseUrl}/users`, userDetails);
+  registerUser(userDetails: registerCredentials) {
+    return this.http.post<IResponseRegister>(`${this.baseUrl}/Authentication/reg`, userDetails);
   }
 
   getUserByEmail(email: string): Observable<User[]> {

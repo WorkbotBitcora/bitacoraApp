@@ -1,16 +1,15 @@
 <section>
-  <p-card header="Técnico" [style]="{ width: '360px' , 'text-align': 'center' }">
+  <p-card header="Técnico {{nombreTecnico}}" [style]="{ width: '360px' , 'text-align': 'center' }">
     <div class="field">
       <!-- Botones para redireccionar a otras páginas -->
-
       <a routerLink="/bitacora">
         <p-button label="Mostrar Agendas " styleClass="w-full" type="submit"
           [style]="{ 'background-color': '#007bff0a', 'color': '#222121', 'border-color': '#007bff09' }"></p-button>
       </a>
     </div>
     <div class="field">
-      <a routerLink="/agenda">
-        <p-button label="Agendas Completadas" styleClass="w-full" type="submit"
+      <a routerLink="/agendacom">
+        <p-button label="Agendas Completadas" styleClass="w-full" 
           [style]="{ 'background-color': '#007bff0a', 'color': '#222121', 'border-color': '#007bff09' }"></p-button>
       </a>
     </div>

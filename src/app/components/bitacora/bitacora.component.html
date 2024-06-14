@@ -4,25 +4,23 @@
   <p-card header="Bitacora" [style]="{ width: '800px', 'text-align': 'center'  }">
     <div class="table-container">
   <div class="table-row table-header">
+    <div class="table-cell">ID</div>
     <div class="table-cell">FECHA INICIO</div>
-    <div class="table-cell">FECHA FIN</div>
-    <div class="table-cell">ENCARGADO</div>
-    <div class="table-cell">NOMBRE CLIENTE</div>
-    <div class="table-cell">TIPO EQUIPO</div>
-    <div class="table-cell">Observaciones</div>
+    <div class="table-cell">CLIENTE</div>
+    <div class="table-cell">ESTADO</div>
+    <div class="table-cell"></div>
   </div>
 
   <div class="table-row" *ngFor="let item of bitacoraItems">
-    <div class="table-cell">{{ item.fechaInicio }}</div>
-    <div class="table-cell">{{ item.fechaFin }}</div>
-    <div class="table-cell">{{ item.encargado }}</div>
-    <div class="table-cell">{{ item.nombreCliente }}</div>
-    <div class="table-cell">{{ item.tipoEquipo }}</div>
+    <div class="table-cell">{{ item.id }}</div>
+    <div class="table-cell">{{ item.fechaEntrada }}</div>
+    <div class="table-cell">{{ item.usuario.nombre }}</div>
+    <div class="table-cell">{{ item.estado.nombre }}</div>
     <div class="table-cell">
       <p-button
-          label="Ver"
+          label="Revisar"
           styleClass="w-full"
-          (click)="goToRouteObservacion()"
+          (click)="goToRouteRevisar(item)"
           [style]="{ 'background-color': '#007bff0a', 'color': '#222121', 'border-color': '#007bff09' }"
         ></p-button>
     </div>
@@ -45,7 +43,7 @@
       <p-button
        label="Cerrar Sesión"
        styleClass="w-full"
-       (click)="goToRouteCerrar()"
+       (click)="logOut()"
        [style]="{ 'background-color': '#007bff0a', 'color': '#222121', 'border-color': '#007bff09' }"
 ></p-button>
     </div>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 
 
@@ -7,7 +7,12 @@ import { Component } from '@angular/core';
   templateUrl: './cliente.component.html',
   styleUrls: ['./cliente.component.css']
 })
-export class ClienteComponent {
+export class ClienteComponent implements OnInit{
+  nombreUsuario : string = "";
+  
+  ngOnInit(): void {
+    this.nombreUsuario = localStorage.getItem('username')|| "SIN NOMBRE" ;
+  }
   
   public logOut() {
     localStorage.clear();

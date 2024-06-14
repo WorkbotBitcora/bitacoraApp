@@ -1,15 +1,15 @@
 <section>
-  <p-card header="Usuario" [style]="{ width: '360px' , 'text-align': 'center' }">
+  <p-card header="Usuario {{nombreUsuario}}" [style]="{ width: '360px' , 'text-align': 'center' }">
     <div class="field">
       <!-- Botones para redireccionar a otras páginas -->
 
-      <a routerLink="/login">
+      <a routerLink="/bitacoracliente">
         <p-button label="Agendar Revisiones " styleClass="w-full" type="submit"
           [style]="{ 'background-color': '#007bff0a', 'color': '#222121', 'border-color': '#007bff09' }"></p-button>
       </a>
     </div>
     <div class="field">
-      <a routerLink="/login">
+      <a routerLink="/agendaporcliente">
         <p-button  label=" lista de revisiones " styleClass="w-full" type="submit"
           [style]="{ 'background-color': '#007bff0a', 'color': '#222121', 'border-color': '#007bff09' }"></p-button>
       </a>
